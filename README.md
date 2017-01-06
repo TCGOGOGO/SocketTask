@@ -1,10 +1,11 @@
-summary
+#summary
 
 This program enable the communication between mutil client and single server
 
 Using multi-threading and socket technology. each client's connection to the server corresponds to a thread
 
-some features
+
+#some features
 
 1. server can send broadcast 
 
@@ -18,6 +19,7 @@ some features
 
 6. client's online time will be calculated when offline
 
-note
+
+#note
 
 server must be executed first when execute and then you can add the client 
