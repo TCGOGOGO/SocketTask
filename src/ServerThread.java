@@ -11,6 +11,7 @@ public class ServerThread extends Thread {
     private volatile Socket socket = null;
     private static BufferedReader br = null;
     private static PrintWriter pw = null;
+    private String userName;
 
     public ServerThread(Socket s) {
         socket = s;
@@ -19,6 +20,9 @@ public class ServerThread extends Thread {
             pw = new PrintWriter(
                     new BufferedWriter(
                             new OutputStreamWriter(socket.getOutputStream())), true);
+            String linkMessage = br.readLine();
+            System.out.println(linkMessage);
+            userName = genUserName(linkMessage);
             start();
         } catch (Exception e) {
             e.printStackTrace();
@@ -27,6 +31,19 @@ public class ServerThread extends Thread {
 
     public Socket getSocket() {
         return socket;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public String genUserName(String str) {
+        String name = "";
+        int end = str.indexOf("连接成功");
+        for (int i = 0; i < end; i ++) {
+            name += str.charAt(i);
+        }
+        return name;
     }
 
     public void run() {
@@ -44,17 +61,19 @@ public class ServerThread extends Thread {
                             }
                             br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                             message = br.readLine();
-                            if (message == null || message == "") {
+                            if (message == null) {
                                 return;
                             }
+                            if (message.length() == 0) {
+                                continue;
+                            }
                             if (message.equals("再见")) {
-                                System.out.println("用户" + Common.getPort(socket) + "已下线");
-                                Server.mp.remove(socket);
+                                System.out.println("用户 " + userName + "已下线");
                                 Server.set.remove(ServerThread.this);
                                 return;
                             }
                             else {
-                                System.out.println("用户" + Common.getPort(socket) + ": " + message);
+                                System.out.println("用户 " + userName + ": " + message);
                             }
                         } catch (IOException e) {
                         }
