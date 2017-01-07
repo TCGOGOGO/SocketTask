@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.*;
@@ -55,6 +56,22 @@ public class Server {
                                         }
                                     }
                                  }
+                            }
+                            else if (message.contains("发送单播消息")) {
+                                System.out.print("请输入主机号: ");
+                                int port = in.nextInt();
+                                System.out.println("发送内容: ");
+                                for (ServerThread st : set) {
+                                    try {
+                                        message = in.next();
+                                        if (Common.getPort(st.getSocket()).equals(port + "")) {
+                                            st.sendMessage(message, st);
+                                            break;
+                                        }
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
                             }
                             else if (message.contains("查询主机使用情况")) {
                                 System.out.print("请输入主机标号: ");
