@@ -1,6 +1,7 @@
 #summary
 
 This program enable the communication between mutil client and single server within localhost's different ports to provide a simulation of an Internet cafes scene
+
 Using multi-threading and socket technology. each client's connection to the server corresponds to a thread
 
 
