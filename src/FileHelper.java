@@ -1,8 +1,5 @@
 import java.io.*;
 
-/**
- * Created by tcgogogo on 17/1/6.
- */
 public class FileHelper {
 
     public File file;
@@ -15,6 +12,13 @@ public class FileHelper {
         }
     }
 
+    public static boolean QueryIsExistFile(String fileName) {
+        if(new File(dir + fileName).exists()) {
+            return true;
+        }
+        return false;
+    }
+
     public void writeToFile(String content) throws FileNotFoundException {
         FileOutputStream fileOut = new FileOutputStream(file, true);
         try {
@@ -25,13 +29,16 @@ public class FileHelper {
         }
     }
 
-    public void readFromFile() throws IOException {
+    public StringBuffer readFromFile() throws IOException {
         FileInputStream fileIn = new FileInputStream(file);
         BufferedReader br = new BufferedReader(new InputStreamReader(fileIn));
         String line = "";
+        StringBuffer ans = new StringBuffer("");
         while((line = br.readLine()) != null) {
-            System.out.println(line);
+            //System.out.println(line);
+            ans.append(line + "\n");
         }
         br.close();
+        return ans;
     }
 }

@@ -1,6 +1,5 @@
 import java.net.Socket;
 
-
 public class Common {
 
     public static String getOnlineTime (long start, long end) {
@@ -32,6 +31,9 @@ public class Common {
     }
 
     public static boolean isCon(Socket socket) {
+        if (socket == null) {
+            return false;
+        }
         if (!socket.isClosed() && socket.isConnected()) {
             return true;
         }
