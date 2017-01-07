@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66766cbd-1772-4ecb-9427-ed816cf10799" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/45990" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/49896" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/49903" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/49904" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/49910" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/49911" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/56029" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/56030" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/56036" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/56038" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/56047" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/56051" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/56740" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MySocket/Client.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MySocket/Server$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MySocket/Server.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Client.java" afterPath="$PROJECT_DIR$/src/Client.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Common.java" afterPath="$PROJECT_DIR$/src/Common.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FileHelper.java" afterPath="$PROJECT_DIR$/src/FileHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server.java" afterPath="$PROJECT_DIR$/src/Server.java" />
-    </list>
+    <list default="true" id="66766cbd-1772-4ecb-9427-ed816cf10799" name="Default" comment="" />
     <ignored path="MySocket.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
